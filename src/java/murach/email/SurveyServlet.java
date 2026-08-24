@@ -17,7 +17,8 @@ public class SurveyServlet extends HttpServlet {
             HttpServletResponse response)
             throws ServletException, IOException {
 
-        // Lấy dữ liệu từ form
+        request.setCharacterEncoding("UTF-8");
+
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String email = request.getParameter("email");
@@ -28,7 +29,6 @@ public class SurveyServlet extends HttpServlet {
                 request.getParameter("emailAnnouncements");
         String contact = request.getParameter("contact");
 
-        // Tạo đối tượng Survey
         Survey survey = new Survey();
 
         survey.setFirstName(firstName);
@@ -40,10 +40,8 @@ public class SurveyServlet extends HttpServlet {
         survey.setEmailAnnouncements(emailAnnouncements);
         survey.setContact(contact);
 
-        // Đưa Survey sang trang JSP
         request.setAttribute("survey", survey);
 
-        // Chuyển sang trang Thanks
         request.getRequestDispatcher("/thanks.jsp")
                 .forward(request, response);
     }

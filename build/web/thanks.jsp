@@ -36,27 +36,19 @@
 
         <h1>How did you hear about us?</h1>
 
-        <label>Your answer:</label>
-        <span>${survey.hearAboutUs}</span>
-        <br>
+        <p>Your answer: ${survey.hearAboutUs}</p>
 
 
         <h1>Announcements</h1>
 
-        <label>New CDs and special offers:</label>
-        <span>${survey.offers}</span>
-        <br>
+        <p>New CDs and special offers: ${survey.offers}</p>
 
-        <label>Email announcements:</label>
-        <span>${survey.emailAnnouncements}</span>
-        <br>
+        <p>Email announcements: ${survey.emailAnnouncements}</p>
 
 
         <h1>Contact</h1>
 
-        <label>Contact me by:</label>
-        <span>${survey.contact}</span>
-        <br>
+        <p>Contact me by: ${survey.contact}</p>
 
 
         <p>Thank you for completing our survey!</p>
